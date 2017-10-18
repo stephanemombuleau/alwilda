@@ -3,5 +3,5 @@ from .search import search_address
 
 
 api_urls = [
-    Route('/instant_answer', 'GET', search_address)
+    Route('/instant_answer', 'GET', instant_answer)
 ]
