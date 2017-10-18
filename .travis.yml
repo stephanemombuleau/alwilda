@@ -12,3 +12,5 @@ install:
 script:
     - pipenv run apistar test
 
+notifications:
+    email: false
