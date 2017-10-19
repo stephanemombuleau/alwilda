@@ -23,7 +23,8 @@ To install the dependencies just run:
 You can then query it:
 
 ```bash
-curl http://localhost:8008/v1/instant_answer?q=1 Avenue des Champs-Élysées Paris
+curl 'http://localhost:8080/v1/instant_answer?q=1%20Avenue%20des%20Champs-Élysées%20Paris'
+
 ```
 
 ## Running the tests
