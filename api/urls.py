@@ -1,5 +1,5 @@
 from apistar import Route
-from .search import search_address
+from .search import instant_answer
 
 
 api_urls = [

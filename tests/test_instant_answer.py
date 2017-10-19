@@ -5,7 +5,7 @@ from app import app
 def test_instant_answer_invalid_address():
     client = TestClient(app)
     response = client.get(
-        url='http://localhost/api/v1/instant_answer',
+        url='http://localhost/v1/instant_answer',
         params={'q': 'azerty'}
     )
 
@@ -19,7 +19,7 @@ def test_instant_answer_invalid_address():
 def test_instant_answer_bad_request():
     client = TestClient(app)
     response = client.get(
-        url='http://localhost/api/v1/instant_answer'
+        url='http://localhost/v1/instant_answer'
     )
 
     assert response.status_code == 400
@@ -32,7 +32,7 @@ def test_instant_answer_bad_request():
 def test_instant_answer_valid_address():
     client = TestClient(app)
     response = client.get(
-        url='http://localhost/api/v1/instant_answer',
+        url='http://localhost/v1/instant_answer',
         params={'q': 'Rue de Rivoli Paris'}
     )
 
