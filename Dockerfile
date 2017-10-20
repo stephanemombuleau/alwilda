@@ -13,6 +13,8 @@ RUN pip install pipenv
 WORKDIR /app
 
 RUN pipenv install --system --deploy
+RUN pip install gunicorn==19.7.1 meinheld==0.6.1
+
 
 EXPOSE 5000
 
