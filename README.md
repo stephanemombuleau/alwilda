@@ -16,6 +16,34 @@ Alwilda depends on python 3.6 and [pipenv](https://docs.pipenv.org/).
 To install the dependencies just run:
 `pipenv install`
 
+you also need libpostal and fasttext
+
+#### Installation of Postal:
+Before you install `Postal`, make sure you have the following prerequisites:
+
+    sudo apt-get install curl autoconf automake libtool pkg-config
+
+Then to install the C library:
+
+    git clone https://github.com/openvenues/libpostal
+    cd libpostal
+    ./bootstrap.sh
+    ./configure --datadir=[...some dir with a few GB of space...]
+    make
+    sudo make install
+
+    # On Linux it's probably a good idea to run
+    sudo ldconfig
+
+#### Installation of FastText
+
+In order to build `fastText`, use the following:
+
+    git clone https://github.com/facebookresearch/fastText.git
+    cd fastText
+    make
+
+
 ## Running the API
 
 `apistar run`
