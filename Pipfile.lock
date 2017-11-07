@@ -31,10 +31,10 @@
     "default": {
         "addr-detector": {
             "hashes": [
-                "sha256:b619df8f3ce9d437aa061d0c4be74d79a73543c074d3790c49af9c87ea22ea0e",
-                "sha256:4a81faf1624d902541c9c04343ac01fb1b6ef4f2f976075a931c6548abd771ad"
+                "sha256:601b5e5dc6421f07c00b8e331d46499b13b0a921bc641645521de19c59fbff7d",
+                "sha256:263ad0bf46e974929c716ca20cc8a4fcab9cc2f9f4a18d39c1e33d29f64fa397"
             ],
-            "version": "==0.1.1"
+            "version": "==0.1.2"
         },
         "apistar": {
             "hashes": [
