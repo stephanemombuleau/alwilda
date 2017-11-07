@@ -1,16 +1,44 @@
 language: python
 
-cache: pip
+cache: 
+    - pip
 
 python:
     - "3.6"
 
+addons:
+    apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - gcc-4.8
+        - libsnappy-dev
+        - realpath
+
+before_install:
+    - export CC="gcc-4.8"
+    - mkdir deps
+    - git clone https://github.com/openvenues/libpostal
+    - pushd libpostal
+    - ./bootstrap.sh
+    - ./configure --datadir=$(pwd)/data --prefix=$(realpath $(pwd)/../deps) --bindir=$(realpath $(pwd)/../deps)
+    - make install
+    - export PKG_CONFIG_PATH=$(pwd)/../deps/lib/pkgconfig:$PKG_CONFIG_PATH
+    - export LD_LIBRARY_PATH=$(pwd)/../deps/lib:$LD_LIBRARY_PATH
+    - export CPATH=$(pwd)/../deps/include:$CPATH
+    - popd
+    - git clone https://github.com/facebookresearch/fastText.git
+    - pushd fastText
+    - make
+    - popd
+
 install:
+    - echo "include dir = $CPATH, lb lib = $LD_LIBRARY_PATH"
     - pip install pipenv
-    - pipenv install
+    - pipenv install --deploy --system
 
 script:
-    - pipenv run apistar test
+    - apistar test
 
 notifications:
     email: false
