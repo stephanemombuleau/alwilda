@@ -1,20 +1,36 @@
-# Using lightweight alpine image
-FROM python:3.6-alpine3.6
+FROM alpine:3.6 as builder
+RUN apk update \
+    && apk add findutils autoconf automake libtool curl git g++ make\
+    && git clone https://github.com/openvenues/libpostal \
+    && cd libpostal \
+    && ./bootstrap.sh \
+    && ./configure  --datadir=/opt/libpostal_data \
+    && make \
+    && make install DESTDIR=/tmp/libpostal
+
+# Using lightweight alpine image with python3/scipy
+FROM antoinede/alpine-3.6-python-3.6-scipy
+
+# we get the previously build libpostal
+COPY --from=builder /tmp/libpostal /
+COPY --from=builder /opt/libpostal_data /opt/libpostal_data
 
 # Installing packages
-RUN apk update && apk add gcc musl-dev
+RUN apk update \
+    && apk add g++ musl-dev make python3-dev git\
+    && git clone https://github.com/facebookresearch/fastText.git /opt/fasttext \
+    && cd /opt/fasttext \
+    && make \
+    && pip install pipenv gunicorn==19.7.1 meinheld==0.6.1
 
-RUN mkdir /app
-ADD api /app/api
 ADD app.py Pipfile* /app/
-
-RUN pip install pipenv
 
 WORKDIR /app
 
 RUN pipenv install --system --deploy
-RUN pip install gunicorn==19.7.1 meinheld==0.6.1
 
+# the sources are copied as late as possible since they are likely to change often
+ADD api /app/api
 
 EXPOSE 5000
 
