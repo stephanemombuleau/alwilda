@@ -28,7 +28,6 @@ def test_instant_answer_bad_request():
     }
 
 
-
 def test_instant_answer_valid_address():
     client = TestClient(app)
     response = client.get(
@@ -39,5 +38,5 @@ def test_instant_answer_valid_address():
     assert response.status_code == 200
     assert response.json() == {
         'q': 'Rue de Rivoli Paris',
-        'is_address': False
+        'is_address': True
     }

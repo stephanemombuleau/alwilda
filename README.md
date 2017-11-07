@@ -7,7 +7,7 @@ For the moment it provides only one route `/v1/instant_answer` to check if a que
 
 Alwilda has been made with [api star](https://github.com/encode/apistar)
 
-The address caracterization uses [TODO]()
+The address caracterization uses [addr_detector](https://github.com/rdoume/addr_detector) for the adress detection.
 
 ## Installation
 
