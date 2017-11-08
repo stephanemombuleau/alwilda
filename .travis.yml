@@ -1,16 +1,25 @@
 language: python
 
-cache: pip
+cache: 
+    - pip
 
 python:
     - "3.6"
 
-install:
-    - pip install pipenv
-    - pipenv install
+sudo: required
+
+services:
+  - docker
+
+before_install:
+    - sudo apt-get update
+    - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+    - docker --version # for verification
+    - travis_wait docker build -t qwantresearch/alwilda .
+    - docker build -t alwilda_test -f Dockerfile_test .
 
 script:
-    - pipenv run apistar test
+    - docker run alwilda_test 
 
 notifications:
     email: false

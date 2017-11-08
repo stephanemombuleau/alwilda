@@ -1,14 +1,22 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 name = "pypi"
 verify_ssl = true
 
+
 [requires]
+
 python_version = "3.6"
 
-[packages]
-apistar = "==0.3.9"
 
+[packages]
+
+apistar = "==0.3.9"
+cython = "*"
+numpy = "*"
+scipy = "*"
+addr-detector = "*"
 
 
 [dev-packages]
