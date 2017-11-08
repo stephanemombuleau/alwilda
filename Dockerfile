@@ -34,4 +34,6 @@ ADD api /app/api
 
 EXPOSE 5000
 
-ENTRYPOINT gunicorn app:app --workers=4 --bind=0.0.0.0:5000 --pid=pid --worker-class=meinheld.gmeinheld.MeinheldWorker
+ENV NB_WORKER 1
+
+ENTRYPOINT gunicorn app:app --workers=${NB_WORKER} --bind=0.0.0.0:5000 --pid=pid --worker-class=meinheld.gmeinheld.MeinheldWorker
