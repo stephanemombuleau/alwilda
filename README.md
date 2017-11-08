@@ -13,15 +13,12 @@ The address caracterization uses [addr_detector](https://github.com/rdoume/addr_
 
 Alwilda depends on python 3.6 and [pipenv](https://docs.pipenv.org/).
 
-To install the dependencies just run:
-`pipenv install`
-
-you also need libpostal and fasttext
+Before installing the dependencies you need libpostal and fasttext
 
 #### Installation of Postal:
 Before you install `Postal`, make sure you have the following prerequisites:
 
-    sudo apt-get install curl autoconf automake libtool pkg-config
+    sudo apt-get install curl autoconf automake libtool pkg-config g++ python3.6-dev
 
 Then to install the C library:
 
@@ -43,6 +40,10 @@ In order to build `fastText`, use the following:
     cd fastText
     make
 
+### pip dependencies
+
+To install the dependencies just run:
+`pipenv install`
 
 ## Running the API
 
