@@ -10,6 +10,11 @@ class Result(typesystem.Object):
         'is_address': typesystem.Boolean,
     }
 
+
+fasttext = Fasttext_clf()
+postal = Postal_clf()
+
+
 def instant_answer(q: str) -> Result:
     """
     Check if the query should display a map
@@ -17,8 +22,6 @@ def instant_answer(q: str) -> Result:
     if q is None:
         # value is None if the query param is absent in request
         raise ValidationError({'q': '"q" is required'})
-    fasttext = Fasttext_clf()
-    postal = Postal_clf()
 
     postal_response = postal.predict(q)
     ft_response = fasttext.predict(q)
