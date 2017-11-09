@@ -7,7 +7,7 @@ before_install:
     - sudo apt-get update
     - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
     - docker --version # for verification
-    - travis_wait docker build -t qwantresearch/alwilda .
+    - docker build --cache-from qwantresearch/alwilda:latest -t qwantresearch/alwilda .
     - docker build -t alwilda_test -f Dockerfile_test .
 
 script:
