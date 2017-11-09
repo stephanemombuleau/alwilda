@@ -27,7 +27,7 @@ ADD app.py Pipfile* /app/
 
 WORKDIR /app
 
-RUN pipenv install --system --deploy
+RUN pipenv install --system --deploy --verbose
 
 # the sources are copied as late as possible since they are likely to change often
 ADD api /app/api
