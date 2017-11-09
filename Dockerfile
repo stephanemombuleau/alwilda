@@ -1,6 +1,6 @@
-FROM alpine:3.5 as builder
-RUN apk update \
-    && apk add findutils autoconf automake libtool curl git g++ make\
+FROM python:3.5.4-slim as builder
+RUN apt-get update \
+    && apt-get -y install curl autoconf automake libtool pkg-config g++ git make \
     && git clone https://github.com/openvenues/libpostal \
     && cd libpostal \
     && ./bootstrap.sh \
@@ -9,15 +9,15 @@ RUN apk update \
     && make install DESTDIR=/tmp/libpostal
 
 # Using lightweight alpine image with python3/scipy
-FROM antoinede/scipy-alpine:3.5
+FROM python:3.5.4-slim
 
 # we get the previously build libpostal
 COPY --from=builder /tmp/libpostal /
 COPY --from=builder /opt/libpostal_data /opt/libpostal_data
 
 # Installing packages
-RUN apk update \
-    && apk add g++ musl-dev make python3-dev git\
+RUN apt-get update \
+    && apt-get -y install curl autoconf automake libtool pkg-config g++ git make \
     && git clone https://github.com/facebookresearch/fastText.git /opt/fasttext \
     && cd /opt/fasttext \
     && make \
