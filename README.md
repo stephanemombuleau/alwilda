@@ -75,3 +75,7 @@ It returns a response in json:
 | ---------- | ------- | ------------------------------------------------ |
 | q          | String  | The original query                               |
 | is_address | Boolean | True if the query is an address, False otherwise |
+
+## Name
+
+The API is named after Alwilda, a 5th-century Scandinavian female pirate. If you have never heard of her, you should [search for her in Qwant](https://www.qwant.com/?q=alwilda) ;)
