@@ -40,3 +40,42 @@ def test_instant_answer_valid_address():
         'q': 'Rue de Rivoli Paris',
         'is_address': True
     }
+
+def test_instant_answer_corporate():
+    client = TestClient(app)
+    response = client.get(
+        url='http://localhost/v1/instant_answer',
+        params={'q': 'Alwilda the legendary pirate 🏴‍☠️'}
+    )
+
+    assert response.status_code == 200
+    assert response.json() == {
+        'q': 'Alwilda the legendary pirate 🏴‍☠️',
+        'is_address': False
+    }
+
+def test_instant_answer_with_emoji():
+    client = TestClient(app)
+    response = client.get(
+        url='http://localhost/v1/instant_answer',
+        params={'q': 'Fun with 🎌'}
+    )
+
+    assert response.status_code == 200
+    assert response.json() == {
+        'q': 'Fun with 🎌',
+        'is_address': False
+    }
+
+def test_instant_answer_in_armenian_language():
+    client = TestClient(app)
+    response = client.get(
+        url='http://localhost/v1/instant_answer',
+        params={'q': 'Լիոնյան կայարան'}
+    )
+
+    assert response.status_code == 200
+    assert response.json() == {
+        'q': 'Լիոնյան կայարան',
+        'is_address': False
+    }
