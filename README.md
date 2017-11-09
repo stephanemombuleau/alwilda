@@ -53,9 +53,25 @@ You can then query it:
 
 ```bash
 curl 'http://localhost:8080/v1/instant_answer?q=1%20Avenue%20des%20Champs-Élysées%20Paris'
-
 ```
 
 ## Running the tests
 
 `apistar test`
+
+
+## Using the API
+
+### routes
+
+#### GET /v1/instant_answer
+
+This API detects if a query is an address.
+It has one parameter, `q` for the query
+
+It returns a response in json:
+
+| field      | type    | description                                      |
+| ---------- | ------- | ------------------------------------------------ |
+| q          | String  | The original query                               |
+| is_address | Boolean | True if the query is an address, False otherwise |
