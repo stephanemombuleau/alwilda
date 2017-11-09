@@ -9,7 +9,7 @@ RUN apk update \
     && make install DESTDIR=/tmp/libpostal
 
 # Using lightweight alpine image with python3/scipy
-FROM antoinede/scipy-alpine
+FROM antoinede/scipy-alpine:3.5
 
 # we get the previously build libpostal
 COPY --from=builder /tmp/libpostal /
