@@ -7,7 +7,8 @@ verify_ssl = true
 
 [requires]
 
-python_version = "3.6"
+python_version = "3.5"
+# api star has a bug in 3.5.2, so we should use python version > 3.5.2, but we don't know how to set it in pipenv
 
 
 [packages]

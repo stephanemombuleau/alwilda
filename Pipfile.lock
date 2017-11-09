@@ -1,24 +1,24 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "56613bb8e81f25c20722c67929448075ef97ce30fd01a0ba72aaab3ed77f3d57"
+            "sha256": "dd0a7c2fa4c51ddef4aebc0f0bad6888b80d7ce565be677eb69bb4c48bb43145"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "3.6.1",
+            "implementation_version": "3.5.3",
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
             "platform_release": "4.10.0-19-generic",
             "platform_system": "Linux",
             "platform_version": "#21-Ubuntu SMP Thu Apr 6 17:04:57 UTC 2017",
-            "python_full_version": "3.6.1",
-            "python_version": "3.6",
+            "python_full_version": "3.5.3",
+            "python_version": "3.5",
             "sys_platform": "linux"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.6"
+            "python_version": "3.5"
         },
         "sources": [
             {
@@ -31,10 +31,10 @@
     "default": {
         "addr-detector": {
             "hashes": [
-                "sha256:601b5e5dc6421f07c00b8e331d46499b13b0a921bc641645521de19c59fbff7d",
-                "sha256:263ad0bf46e974929c716ca20cc8a4fcab9cc2f9f4a18d39c1e33d29f64fa397"
+                "sha256:c3553f7c268b895eb66632f97622e92cd53b926b501bdb1636e44e115d7ae53d",
+                "sha256:1549a93d1378943d34fc36261bb9c8a3a62fbebf69e49504294716983149fb6f"
             ],
-            "version": "==0.1.2"
+            "version": "==0.1.3"
         },
         "apistar": {
             "hashes": [
@@ -132,10 +132,10 @@
         },
         "jinja2": {
             "hashes": [
-                "sha256:2231bace0dfd8d2bf1e5d7e41239c06c9e0ded46e70cc1094a0aa64b0afeb054",
-                "sha256:ddaa01a212cd6d641401cb01b605f4a4d9f37bfc93043d7f760ec70fb99ff9ff"
+                "sha256:74c935a1b8bb9a3947c50a54766a969d4846290e1e788ea44c1392163723c3bd",
+                "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
-            "version": "==2.9.6"
+            "version": "==2.10"
         },
         "markupsafe": {
             "hashes": [

@@ -1,4 +1,4 @@
-FROM alpine:3.6 as builder
+FROM alpine:3.5 as builder
 RUN apk update \
     && apk add findutils autoconf automake libtool curl git g++ make\
     && git clone https://github.com/openvenues/libpostal \
@@ -9,7 +9,7 @@ RUN apk update \
     && make install DESTDIR=/tmp/libpostal
 
 # Using lightweight alpine image with python3/scipy
-FROM antoinede/alpine-3.6-python-3.6-scipy
+FROM antoinede/scipy-alpine:3.5
 
 # we get the previously build libpostal
 COPY --from=builder /tmp/libpostal /

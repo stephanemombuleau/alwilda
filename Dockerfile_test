@@ -1,0 +1,5 @@
+FROM qwantresearch/alwilda
+
+ADD tests /app/tests
+
+ENTRYPOINT apistar test
