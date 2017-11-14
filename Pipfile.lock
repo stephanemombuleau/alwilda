@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "dd0a7c2fa4c51ddef4aebc0f0bad6888b80d7ce565be677eb69bb4c48bb43145"
+            "sha256": "5d9ef50e73eedf919528f89c2d00b90d43ddeb0aaf151f8024f23f461de8b46b"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -31,10 +31,9 @@
     "default": {
         "addr-detector": {
             "hashes": [
-                "sha256:c3553f7c268b895eb66632f97622e92cd53b926b501bdb1636e44e115d7ae53d",
-                "sha256:1549a93d1378943d34fc36261bb9c8a3a62fbebf69e49504294716983149fb6f"
+                "sha256:ba2de99149b97fa1001da76ce9eef8d94060fd92ceb4fa6b513df27a7e73655a"
             ],
-            "version": "==0.1.3"
+            "version": "==0.2.0"
         },
         "apistar": {
             "hashes": [
@@ -70,12 +69,6 @@
             ],
             "version": "==0.0.4"
         },
-        "cysignals": {
-            "hashes": [
-                "sha256:e559105e9f8bb5e64ed2eb350ba5ebb51a117cb3a0aa0fb4388b4cdd557a2bef"
-            ],
-            "version": "==1.6.5"
-        },
         "cython": {
             "hashes": [
                 "sha256:aba08b4db9163c52a1106efa8b19c5a4e519e5f45644551bb1358ec189a14505",
@@ -110,12 +103,6 @@
                 "sha256:6a00512de1f2e3ce66ba35c5420babaef1fe2d9c43a8faab4080b0dbcc26bc64"
             ],
             "version": "==0.27.3"
-        },
-        "future": {
-            "hashes": [
-                "sha256:e39ced1ab767b5936646cedba8bcce582398233d6a627067d4c6a454c90cfedb"
-            ],
-            "version": "==0.16.0"
         },
         "idna": {
             "hashes": [
@@ -183,12 +170,6 @@
                 "sha256:0f2d585d22050e90c7d293b6451c83db097df77871974d90efd5a30dc12fcde3"
             ],
             "version": "==1.4.34"
-        },
-        "pyfasttext": {
-            "hashes": [
-                "sha256:232a17b53ec50373749d2bc51679bddfe76ed154d1f8710f6fcd280347188a4a"
-            ],
-            "version": "==0.4.4"
         },
         "pytest": {
             "hashes": [

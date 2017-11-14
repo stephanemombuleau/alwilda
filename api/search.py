@@ -25,10 +25,8 @@ def instant_answer(q: str) -> Result:
 
     postal_response = postal.predict(q)
     ft_response = fasttext.predict(q)
-    postal_is_addr = postal_response[0] if postal_response else None
-    ft_is_addr = ft_response[0] if ft_response else None
 
     # for the moment we decide that it's an address if fasttext and postal agree on it
-    is_addr = ft_is_addr and postal_is_addr
+    is_addr = postal_response and ft_response
 
     return Result(q=q, is_address=is_addr)

@@ -14,10 +14,7 @@ python_version = "3.5"
 [packages]
 
 apistar = "==0.3.9"
-cython = "*"
-numpy = "*"
-scipy = "*"
-addr-detector = "*"
+addr-detector = "==0.2.0"
 
 
 [dev-packages]
