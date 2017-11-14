@@ -15,7 +15,11 @@ fasttext = Fasttext_clf()
 postal = Postal_clf()
 
 
-def instant_answer(q: str) -> Result:
+class Query(typesystem.String):
+    description = 'query'
+
+
+def instant_answer(q: Query) -> Result:
     """
     Check if the query should display a map
     """
