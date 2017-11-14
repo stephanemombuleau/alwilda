@@ -34,7 +34,6 @@ ADD api /app/api
 
 EXPOSE 5000
 
-# Note the number of worker will have a direct impact on the memory consumption, count roughly 2.5G by worker
-ENV NB_WORKER 1
+# you can set another number of worker by passing --workers=${NB_WORKER} to the docker run command
 
-ENTRYPOINT gunicorn app:app --workers=${NB_WORKER} --bind=0.0.0.0:5000 --pid=pid --worker-class=meinheld.gmeinheld.MeinheldWorker
+ENTRYPOINT gunicorn app:app --bind=0.0.0.0:5000 --pid=pid --worker-class=meinheld.gmeinheld.MeinheldWorker --preload
