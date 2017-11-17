@@ -1,20 +1,20 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5d9ef50e73eedf919528f89c2d00b90d43ddeb0aaf151f8024f23f461de8b46b"
+            "sha256": "7cb634bbd9c4e8f9116325a930d6bb3f281d8c8c65f77caa8437e0f86f1034ba"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "3.5.3",
+            "implementation_version": "0",
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
             "platform_release": "4.10.0-19-generic",
             "platform_system": "Linux",
             "platform_version": "#21-Ubuntu SMP Thu Apr 6 17:04:57 UTC 2017",
-            "python_full_version": "3.5.3",
-            "python_version": "3.5",
-            "sys_platform": "linux"
+            "python_full_version": "2.7.14",
+            "python_version": "2.7",
+            "sys_platform": "linux2"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,10 +30,8 @@
     },
     "default": {
         "addr-detector": {
-            "hashes": [
-                "sha256:ba2de99149b97fa1001da76ce9eef8d94060fd92ceb4fa6b513df27a7e73655a"
-            ],
-            "version": "==0.2.0"
+            "editable": true,
+            "git": "git@github.com:antoine-de/addr_detector.git@a9278d8dd0a3e6e540f6087f3afbbac03121b1f9"
         },
         "apistar": {
             "hashes": [
@@ -104,6 +102,11 @@
             ],
             "version": "==0.27.3"
         },
+        "fasttextpy": {
+            "editable": true,
+            "git": "http://github.com/facebookresearch/fastText@c5cb6b2d0e295e58cfa827e38d2e9b1e0cbe09e4",
+            "subdirectory": "python"
+        },
         "idna": {
             "hashes": [
                 "sha256:8c7309c718f94b3a625cb648ace320157ad16ff131ae0af362c9f21b80ef6ec4",
@@ -166,17 +169,24 @@
         },
         "py": {
             "hashes": [
-                "sha256:2ccb79b01769d99115aa600d7eed99f524bf752bba8f041dc1c184853514655a",
-                "sha256:0f2d585d22050e90c7d293b6451c83db097df77871974d90efd5a30dc12fcde3"
+                "sha256:e6fda4487ef65a3dc89f95dc9a27141e7b0fb365a3e2c619f78288d959c7092d",
+                "sha256:e85aaa3c2e837413c6387eb2a4efbe7ff93658813d13986da004984ffe84b3a3"
             ],
-            "version": "==1.4.34"
+            "version": "==1.5.1"
+        },
+        "pybind11": {
+            "hashes": [
+                "sha256:6c907b0c4faa3fd38d13c8bb765d0c9b855bcfc23898bb32847a56ccd47f1f99",
+                "sha256:a96a924fae6e2721efbf24f47561284fd1ea0b655619a8621c4423036183b824"
+            ],
+            "version": "==2.2.1"
         },
         "pytest": {
             "hashes": [
-                "sha256:81a25f36a97da3313e1125fce9e7bbbba565bc7fec3c5beb14c262ddab238ac1",
-                "sha256:27fa6617efc2869d3e969a3e75ec060375bfb28831ade8b5cdd68da3a741dc3c"
+                "sha256:241d7e7798d79192a123ceaf64c602b4d233eacf6d6e42ae27caa97f498b7dc6",
+                "sha256:6d5bd4f7113b444c55a3bbb5c738a3dd80d43563d063fc42dcb0aaefbdd78b81"
             ],
-            "version": "==3.2.3"
+            "version": "==3.2.5"
         },
         "requests": {
             "hashes": [
