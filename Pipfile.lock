@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5d9ef50e73eedf919528f89c2d00b90d43ddeb0aaf151f8024f23f461de8b46b"
+            "sha256": "81d9d58197dda5db415614c2b012a544add446a48a0952bdd79b2dd2b13bb4ac"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -31,9 +31,9 @@
     "default": {
         "addr-detector": {
             "hashes": [
-                "sha256:ba2de99149b97fa1001da76ce9eef8d94060fd92ceb4fa6b513df27a7e73655a"
+                "sha256:fa234d7c48d00411ba2c9150297e034daf5b39a50b33e84b2ca6db6b8ea93f94"
             ],
-            "version": "==0.2.0"
+            "version": "==0.2.1"
         },
         "apistar": {
             "hashes": [
@@ -104,6 +104,12 @@
             ],
             "version": "==0.27.3"
         },
+        "fasttextpy": {
+            "editable": true,
+            "git": "http://github.com/facebookresearch/fastText",
+            "ref": "c5cb6b2d0e295e58cfa827e38d2e9b1e0cbe09e4",
+            "subdirectory": "python"
+        },
         "idna": {
             "hashes": [
                 "sha256:8c7309c718f94b3a625cb648ace320157ad16ff131ae0af362c9f21b80ef6ec4",
@@ -166,17 +172,24 @@
         },
         "py": {
             "hashes": [
-                "sha256:2ccb79b01769d99115aa600d7eed99f524bf752bba8f041dc1c184853514655a",
-                "sha256:0f2d585d22050e90c7d293b6451c83db097df77871974d90efd5a30dc12fcde3"
+                "sha256:8cca5c229d225f8c1e3085be4fcf306090b00850fefad892f9d96c7b6e2f310f",
+                "sha256:ca18943e28235417756316bfada6cd96b23ce60dd532642690dcfdaba988a76d"
             ],
-            "version": "==1.4.34"
+            "version": "==1.5.2"
+        },
+        "pybind11": {
+            "hashes": [
+                "sha256:6c907b0c4faa3fd38d13c8bb765d0c9b855bcfc23898bb32847a56ccd47f1f99",
+                "sha256:a96a924fae6e2721efbf24f47561284fd1ea0b655619a8621c4423036183b824"
+            ],
+            "version": "==2.2.1"
         },
         "pytest": {
             "hashes": [
-                "sha256:81a25f36a97da3313e1125fce9e7bbbba565bc7fec3c5beb14c262ddab238ac1",
-                "sha256:27fa6617efc2869d3e969a3e75ec060375bfb28831ade8b5cdd68da3a741dc3c"
+                "sha256:241d7e7798d79192a123ceaf64c602b4d233eacf6d6e42ae27caa97f498b7dc6",
+                "sha256:6d5bd4f7113b444c55a3bbb5c738a3dd80d43563d063fc42dcb0aaefbdd78b81"
             ],
-            "version": "==3.2.3"
+            "version": "==3.2.5"
         },
         "requests": {
             "hashes": [
